@@ -222,7 +222,7 @@ class judge(login):
             "Cookie": login.cookies
         }
         response = requests.post(url, data=data, headers=headers)
-        print("投币:",response.json())
+        print("投币:av",aid,response.json())
 
         if response.json()['code'] != 0:
             self.givecoin()
@@ -284,7 +284,7 @@ class judge(login):
 
         response = requests.post(url,headers=headers,data=data)
 
-        print("watch_Av_state:",response.text)
+        print("watch_Av_state:av",aid,response.text)
 
     async def judge_run(self):
         while 1:
